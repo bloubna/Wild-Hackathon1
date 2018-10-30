@@ -20,7 +20,7 @@ export class GalleryComponent implements OnInit {
   ngOnInit() {
 
     this.page = this.route.snapshot.params['page'];
-    console.log(this.page);
+    // console.log(this.page);
 
     this.service.setCandies()
     .subscribe(res => {
@@ -40,7 +40,7 @@ export class GalleryComponent implements OnInit {
       this.showProducts = this.products.slice((this.page - 1) * 12, 12 * this.page);
     }
     this.router.navigate([`gallery/${this.page}`]);
-    console.log(this.page);
+    // console.log(this.page);
   }
 
 }

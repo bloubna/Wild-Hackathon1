@@ -10,7 +10,7 @@ a{
   color: black;
 }
 
-input:focus{
+app-searchbar:focus{
  background-color: whitesmoke !important;
  border-color: whitesmoke !important;
 }

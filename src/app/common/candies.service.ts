@@ -22,4 +22,18 @@ export class CandiesService {
 
     return obs;
   }
+
+  setCandiesNames(): Observable<any> {
+    const obs = new BehaviorSubject('');
+
+    for (let i = 1; i < 6; i++) {
+      this.http.get(`https://ssl-api.openfoodfacts.org/category/candies/${i}.json`).subscribe(data => {
+        for (let j = 0; j < 20; j++) {
+          obs.next(data['products'][j].product_name);
+        }
+      });
+    }
+
+    return obs;
+  }
 }

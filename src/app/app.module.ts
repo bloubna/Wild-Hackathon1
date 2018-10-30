@@ -14,6 +14,7 @@ import { ContactComponent } from './contact/contact.component';
 import { HttpClientModule } from '@angular/common/http';
 
 import { ImagePreloadDirective } from './common/image-preload.directive';
+import { SearchbarComponent } from './searchbar/searchbar.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { ImagePreloadDirective } from './common/image-preload.directive';
     HeaderComponent,
     MapComponent,
     ImagePreloadDirective,
-    ContactComponent
+    ContactComponent,
+    SearchbarComponent
   ],
   imports: [
     BrowserModule,
