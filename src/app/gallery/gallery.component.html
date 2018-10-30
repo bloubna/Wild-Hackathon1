@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container pt-5">
 
   <h1 class="text-center p-3">Tous les bonbons</h1>
 
@@ -28,9 +28,15 @@
 
     </div> <!-- #end card -->
 
+    <div *ngIf="products.length < 12" class="col-12">
+      <div class="text-center">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif" alt="">
+      </div>
+    </div>
+
   </div> <!-- #end row -->
 
-  <ngb-pagination class="d-flex justify-content-center" [collectionSize]="(totalPages / 12) * 10" [(page)]="page" [maxSize]="5"
+  <ngb-pagination *ngIf="products.length > 12" class="d-flex justify-content-center pt-3" [collectionSize]="(totalPages / 12) * 10" [(page)]="page" [maxSize]="5"
     [rotate]="true" [boundaryLinks]="true" (pageChange)="change()">
   </ngb-pagination>
   

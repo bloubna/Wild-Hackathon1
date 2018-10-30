@@ -4,7 +4,7 @@ import { GalleryComponent} from './gallery/gallery.component';
 import { MapComponent } from './map/map.component';
 
 const routes: Routes = [
-  { path: 'gallery', component: GalleryComponent },
+  { path: 'gallery/:page', component: GalleryComponent },
   { path: 'map', component: MapComponent },
 ];
 
