@@ -9,6 +9,12 @@
 a{
   color: black;
 }
+
+input:focus{
+ background-color: whitesmoke !important;
+ border-color: whitesmoke !important;
+}
+
 .nav-item {
   text-align: center;
   margin: 3px;
