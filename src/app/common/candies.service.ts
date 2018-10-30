@@ -7,6 +7,9 @@ import { Observable, BehaviorSubject } from 'rxjs';
 })
 export class CandiesService {
 
+  candiesList: any[];
+  candiesCart: any[] = [];
+
   constructor(private http: HttpClient) { }
 
   setCandies(): Observable<any> {
@@ -16,6 +19,20 @@ export class CandiesService {
       this.http.get(`https://ssl-api.openfoodfacts.org/category/candies/${i}.json`).subscribe(data => {
         for (let j = 0; j < 20; j++) {
           obs.next(data['products'][j]);
+        }
+      });
+    }
+
+    return obs;
+  }
+
+  setCandiesNames(): Observable<any> {
+    const obs = new BehaviorSubject('');
+
+    for (let i = 1; i < 6; i++) {
+      this.http.get(`https://ssl-api.openfoodfacts.org/category/candies/${i}.json`).subscribe(data => {
+        for (let j = 0; j < 20; j++) {
+          obs.next(data['products'][j].product_name);
         }
       });
     }

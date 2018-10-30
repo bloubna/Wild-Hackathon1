@@ -4,6 +4,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
+
+
 import { AppComponent } from './app.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { HeaderComponent } from './header/header.component';
@@ -14,6 +16,10 @@ import { ContactComponent } from './contact/contact.component';
 import { HttpClientModule } from '@angular/common/http';
 
 import { ImagePreloadDirective } from './common/image-preload.directive';
+import { SearchbarComponent } from './searchbar/searchbar.component';
+import { CandyModalComponent } from './candy-modal/candy-modal.component';
+import { AcceuilComponent } from './acceuil/acceuil.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -22,14 +28,19 @@ import { ImagePreloadDirective } from './common/image-preload.directive';
     HeaderComponent,
     MapComponent,
     ImagePreloadDirective,
-    ContactComponent
+    ContactComponent,
+    SearchbarComponent,
+    CandyModalComponent,
+    AcceuilComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
     NgbModule,
     FormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

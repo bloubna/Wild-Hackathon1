@@ -25,7 +25,7 @@ h4{
   margin-top: 40%;
 }
 
-input:focus{
+app-searchbar:focus{
  background-color: whitesmoke !important;
  border-color: whitesmoke !important;
 }
