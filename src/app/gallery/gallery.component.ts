@@ -26,6 +26,7 @@ export class GalleryComponent implements OnInit {
     .subscribe(res => {
       this.products.push(res);
       this.totalPages = this.products.length;
+      this.service.candiesList = this.products;
       if (this.totalPages > 12 && this.page === 1) {
         this.showProducts = this.products.slice(this.page, 13);
       }
@@ -41,6 +42,10 @@ export class GalleryComponent implements OnInit {
     }
     this.router.navigate([`gallery/${this.page}`]);
     // console.log(this.page);
+  }
+
+  add(product) {
+    this.service.candiesCart.push(product);
   }
 
 }

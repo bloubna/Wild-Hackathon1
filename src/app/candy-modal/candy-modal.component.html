@@ -1,0 +1,24 @@
+<!-- <h3 class="text-center">
+  {{ mediaInput.product_name }}
+</h3>
+<div class="text-center pb-3">
+  <img src="{{ mediaInput.image_url }}" default="https://via.placeholder.com/150x150" class="img">
+</div>
+
+<button type="button" class="btn btn-warning" (click)="modalInput.close()">Fermer</button> -->
+
+<div class="modal-header">
+  <h4 class="modal-title">{{ mediaInput.product_name }}</h4>
+  <button type="button" class="close" aria-label="Close" (click)="modalInput.dismiss('Cross click')">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <div class="text-center pb-3">
+    <img src="{{ mediaInput.image_url }}" default="https://via.placeholder.com/150x150" class="img">
+  </div>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-success" (click)="modalInput.close('Close click'); addCandy(mediaInput)">Ajouter au sac</button>
+  <button type="button" class="btn btn-warning" (click)="modalInput.close('Close click')">Close</button>
+</div>

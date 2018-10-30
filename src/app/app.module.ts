@@ -15,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { ImagePreloadDirective } from './common/image-preload.directive';
 import { SearchbarComponent } from './searchbar/searchbar.component';
+import { CandyModalComponent } from './candy-modal/candy-modal.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { SearchbarComponent } from './searchbar/searchbar.component';
     MapComponent,
     ImagePreloadDirective,
     ContactComponent,
-    SearchbarComponent
+    SearchbarComponent,
+    CandyModalComponent
   ],
   imports: [
     BrowserModule,

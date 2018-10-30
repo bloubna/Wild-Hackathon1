@@ -7,6 +7,9 @@ import { Observable, BehaviorSubject } from 'rxjs';
 })
 export class CandiesService {
 
+  candiesList: any[];
+  candiesCart: any[] = [];
+
   constructor(private http: HttpClient) { }
 
   setCandies(): Observable<any> {
