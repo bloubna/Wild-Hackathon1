@@ -1,10 +1,10 @@
 .map {
-  height: 90%;
-  width: 80%;
+  height: 100%;
+  width: 100%;
 }
 .carte{
-  margin-left: 25% !important;
-  transform: translateY(100px);
+  max-width : 100%;
+  transform: translateY(60px);
 }
 
 .map input{
@@ -12,5 +12,5 @@
   z-index: 10000;
   margin-left: 20%;
   margin-top: 3%;
-  width: 40%;
+  width: 60%;
 }

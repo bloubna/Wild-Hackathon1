@@ -4,6 +4,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
+
+
 import { AppComponent } from './app.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { HeaderComponent } from './header/header.component';
@@ -18,7 +20,6 @@ import { SearchbarComponent } from './searchbar/searchbar.component';
 import { CandyModalComponent } from './candy-modal/candy-modal.component';
 import { AcceuilComponent } from './acceuil/acceuil.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
     NgbModule,
     FormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
