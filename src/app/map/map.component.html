@@ -4,7 +4,6 @@
     <label for="latitude">Latitude:</label>
     <input id="latitude" type="number" [(ngModel)]="latitude" placeholder="Latitude">
   </div>
-
   <div>
     <label for="longitude">Longitude:</label>
     <input id="longitude" type="number" [(ngModel)]="longitude" placeholder="Longitude">
@@ -12,8 +11,17 @@
   <button (click)="setCenter()">Go</button>
 </div>
 <br>
-<div id="map" class="map"></div>
+<div id="map" class="map">
+  <input type="text" list="SearchMap" class="form-control awesomplete" placeholder="Ex: Tours, 49 boulevard preuilly 37000">
+  <datalist id="SearchMap">
+    <option *ngFor="let adresse of adresses"> {{adresse}} </option>
+  </datalist>
+
+</div>
+
 <div id="mouse-position"></div>
 </div>
+
+
 
 

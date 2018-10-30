@@ -1,0 +1,8 @@
+{
+"/search/": {
+  "target": "https://api-adresse.data.gouv.fr/",
+  "secure": false,
+  "logLevel": "debug",
+  "changeOrigin": true
+  }
+}

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AdresseService } from '../common/adresse.service';
+import * as _ from 'lodash';
 
 declare var ol: any;
 @Component({
@@ -11,12 +13,24 @@ export class MapComponent implements OnInit {
   longitude = 2.213749;
 
   map: any;
+  adresse: any;
+  adresses: any[] = [];
 
 
-  constructor() { }
+  constructor(private service: AdresseService) { }
 
   ngOnInit() {
-    const mousePositionControl = new ol.control.MousePosition({
+
+    this.service.readAll().subscribe(res => {
+      this.adresse = res;
+      // this.adresses = (_.toArray(this.adresse.features['properties']['label']));
+      console.log(res);
+      for (let i = 0; i < res.features.length; i++) {
+      this.adresses.push(res.features[i].properties.label);
+      }
+      console.log(this.adresses);
+    });
+   const mousePositionControl = new ol.control.MousePosition({
       coordinateFormat: ol.coordinate.createStringXY(4),
       projection: 'EPSG:4326',
       // comment the following two lines to have the mouse position
