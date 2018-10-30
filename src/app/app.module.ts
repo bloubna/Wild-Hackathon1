@@ -10,6 +10,7 @@ import { HeaderComponent } from './header/header.component';
 import { MapComponent } from './map/map.component';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
+import { ContactComponent } from './contact/contact.component';
 
 import { ImagePreloadDirective } from './common/image-preload.directive';
 import { HttpClientModule } from '@angular/common/http';
@@ -20,7 +21,11 @@ import { HttpClientModule } from '@angular/common/http';
     GalleryComponent,
     HeaderComponent,
     MapComponent,
+<<<<<<< HEAD
     ImagePreloadDirective
+=======
+    ContactComponent
+>>>>>>> 1fd294c2c0ebd03764a4b12b7438dfcc34cc21ba
   ],
   imports: [
     BrowserModule,
