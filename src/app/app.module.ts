@@ -17,7 +17,6 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { ImagePreloadDirective } from './common/image-preload.directive';
 
-
 @NgModule({
   declarations: [
     AppComponent,
