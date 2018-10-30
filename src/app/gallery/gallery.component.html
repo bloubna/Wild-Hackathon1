@@ -1,13 +1,37 @@
 <div class="container">
+
+  <h1 class="text-center p-3">Tous les bonbons</h1>
+
   <div class="row">
-    <div class="card" style="width: 18rem;">
-      <img class="card-img-top" src="https://i.goopics.net/99Kll.jpg" alt="candies">
-      <div class="card-body">
-        <h5 class="card-title text-white text-center">Card title</h5>
-        <p class="card-text text-white text-center">Some quick example text to build on the card title and make up the
-          bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary text-center ml-4">Trouver cette friandise</a>
+
+    <div *ngFor="let product of products" class="col-12 col-sm-6 col-md-4 col-lg-3 col-cards">
+
+      <div class="card">
+
+        <div class="text-center pt-3">
+
+          <img src="{{ product.image_url }}" default="https://via.placeholder.com/150x150" class="img" (click)="openMedia(content)">
+
+        </div>
+
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">{{ product.product_name }}</h5>
+          <p class="card-text"></p>
+          <!-- <a class="btn mt-auto text-white" (click)="openMedia(content)">Voir plus</a> -->
+        </div>
+
       </div>
-    </div>
-  </div>
-</div>
+
+      <!-- <ng-template #content let-modal> -->
+        <!-- <app-modal [mediaInput]="product" [modalInput]="modal"></app-modal> -->
+      <!-- </ng-template> -->
+
+    </div> <!-- #end card -->
+
+  </div> <!-- #end row -->
+
+  <ngb-pagination class="d-flex justify-content-center" [collectionSize]="totalPages" [(page)]="page" [maxSize]="5"
+    [rotate]="true" [boundaryLinks]="true" (pageChange)="changePage()">
+  </ngb-pagination>
+
+</div> <!-- #end container-fluid -->

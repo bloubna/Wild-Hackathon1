@@ -1,8 +1,21 @@
-div.card{
-  background-color: #232323 !important;
+.card{
+	height: 100%;
 }
 
-.container{
-  margin-left: 25% !important;
-  transform: translateY(100px);
+.col-cards{
+	margin-top: 1em;
+}
+
+.card-img-top{
+	height: 200px;
+}
+
+.card img{
+	max-height: 200px;
+	max-width: 85%;
+}
+
+
+.btn {
+	background-color: #145A24;
 }
