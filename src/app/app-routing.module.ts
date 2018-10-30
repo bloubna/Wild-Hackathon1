@@ -11,7 +11,8 @@ const routes: Routes = [
   { path: 'map', component: MapComponent },
   { path: 'contact', component: ContactComponent },
   { path: '', component: AcceuilComponent },
-  { path: '**', component: NotFoundComponent }
+  { path: '404', component: NotFoundComponent },
+  { path: '**', redirectTo: '404', pathMatch: 'full' }
 ];
 
 @NgModule({
