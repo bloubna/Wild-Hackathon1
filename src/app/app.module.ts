@@ -9,13 +9,15 @@ import { HeaderComponent } from './header/header.component';
 import { MapComponent } from './map/map.component';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GalleryComponent,
     HeaderComponent,
-    MapComponent
+    MapComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

@@ -10,7 +10,7 @@
         <a class="nav-link active" href="#">Accueil <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/map">CarteAjouer</a>
+        <a class="nav-link" [routerLink]="['/map']" routerLinkActive="router-link-active">CarteAjouer</a>
       </li>
        <li class="nav-item">
         <a class="nav-link" routerLink="/gallery">Bonbondex</a>
@@ -19,7 +19,7 @@
         <a class="nav-link" href="#">AjouterBonbon</a>
       </li>
        <li class="nav-item">
-        <a class="nav-link" href="#">Contacter</a>
+        <a class="nav-link" [routerLink]="['/contact']">Contacter</a>
       </li>
     </ul>
   </div>
