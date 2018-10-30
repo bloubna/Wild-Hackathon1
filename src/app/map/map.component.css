@@ -7,10 +7,14 @@
   transform: translateY(60px);
 }
 
-.map input{
+#inputGroup{
   position: absolute;
   z-index: 10000;
   margin-left: 20%;
   margin-top: 3%;
-  width: 60%;
+  width: 100%;
+}
+
+#inputGroup input {
+  width: 55%;
 }
