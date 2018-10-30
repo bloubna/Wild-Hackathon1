@@ -14,7 +14,7 @@ import { ContactComponent } from './contact/contact.component';
 import { HttpClientModule } from '@angular/common/http';
 
 import { ImagePreloadDirective } from './common/image-preload.directive';
-import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -22,11 +22,8 @@ import { HttpClientModule } from '@angular/common/http';
     GalleryComponent,
     HeaderComponent,
     MapComponent,
-<<<<<<< HEAD
-    ImagePreloadDirective
-=======
+    ImagePreloadDirective,
     ContactComponent
->>>>>>> 1fd294c2c0ebd03764a4b12b7438dfcc34cc21ba
   ],
   imports: [
     BrowserModule,
