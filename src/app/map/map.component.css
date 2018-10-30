@@ -1,0 +1,8 @@
+.map {
+  height: 70%;
+  width: 80%;
+}
+.carte{
+  margin-left: 25% !important;
+  transform: translateY(-700px);
+}
