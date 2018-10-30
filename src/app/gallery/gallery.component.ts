@@ -25,8 +25,8 @@ export class GalleryComponent implements OnInit {
     .subscribe(res => {
       this.products.push(res);
       this.totalPages = this.products.length;
-      if (this.totalPages > 20) {
-        this.showProducts = this.products.slice(0, 12);
+      if (this.totalPages > 12) {
+        this.showProducts = this.products.slice(1, 12);
       }
     });
 
@@ -34,7 +34,11 @@ export class GalleryComponent implements OnInit {
 
   change() {
     console.log(this.page);
-    this.showProducts = this.products.slice((this.page - 1) * 12, 12 * this.page);
+    if (this.page === 1) {
+      this.showProducts = this.products.slice(1, 12);
+    } else {
+      this.showProducts = this.products.slice((this.page - 1) * 12, 12 * this.page);
+    }
   }
 
 }
