@@ -5,9 +5,24 @@
   margin-top: 45px !important;
   height: 100% !important;
   position: fixed;
+  background-image: url('https://i.goopics.net/2wVAr.jpg');
+  background-attachment: fixed;
 }
 a{
-  color: black;
+  color:  #e65c00;
+}
+
+a:hover{
+  color:  #e65c00;
+  font-size: 180%;
+}
+
+.navbar-brand{
+  color:  #e65c00;
+}
+h4{
+  color: #e65c00;
+  margin-top: 40%;
 }
 
 input:focus{
