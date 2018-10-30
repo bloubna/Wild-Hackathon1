@@ -2,7 +2,7 @@
   height: 100%;
   width: 100%;
 }
-.carte{
+iframe{
   max-width : 100%;
   transform: translateY(60px);
 }
