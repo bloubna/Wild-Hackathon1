@@ -4,9 +4,9 @@
 
   <div class="row">
 
-    <div *ngFor="let product of products" class="col-12 col-sm-6 col-md-4 col-lg-3 col-cards">
+    <div *ngFor="let product of showProducts" class="col-12 col-sm-6 col-md-4 col-lg-3 col-cards">
 
-      <div class="card">
+      <div class="card">  
 
         <div class="text-center pt-3">
 
@@ -30,8 +30,8 @@
 
   </div> <!-- #end row -->
 
-  <ngb-pagination class="d-flex justify-content-center" [collectionSize]="totalPages" [(page)]="page" [maxSize]="5"
-    [rotate]="true" [boundaryLinks]="true" (pageChange)="changePage()">
+  <ngb-pagination class="d-flex justify-content-center" [collectionSize]="(totalPages / 12) * 10" [(page)]="page" [maxSize]="5"
+    [rotate]="true" [boundaryLinks]="true" (pageChange)="change()">
   </ngb-pagination>
-
+  
 </div> <!-- #end container-fluid -->
