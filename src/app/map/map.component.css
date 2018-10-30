@@ -6,3 +6,11 @@
   margin-left: 25% !important;
   transform: translateY(100px);
 }
+
+.map input{
+  position: absolute;
+  z-index: 10000;
+  margin-left: 20%;
+  margin-top: 3%;
+  width: 40%;
+}
