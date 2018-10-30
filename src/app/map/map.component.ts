@@ -15,7 +15,7 @@ export class MapComponent implements OnInit {
   map: any;
   adresse: any;
   adresses: any[] = [];
-
+  label: string ;
 
   constructor(private service: AdresseService) { }
 
@@ -23,13 +23,15 @@ export class MapComponent implements OnInit {
 
     this.service.readAll().subscribe(res => {
       this.adresse = res;
-      // this.adresses = (_.toArray(this.adresse.features['properties']['label']));
+
       console.log(res);
       for (let i = 0; i < res.features.length; i++) {
       this.adresses.push(res.features[i].properties.label);
       }
       console.log(this.adresses);
     });
+
+
    const mousePositionControl = new ol.control.MousePosition({
       coordinateFormat: ol.coordinate.createStringXY(4),
       projection: 'EPSG:4326',
@@ -55,9 +57,10 @@ export class MapComponent implements OnInit {
       ],
       view: new ol.View({
         center: ol.proj.fromLonLat([2.213749, 46.227638]),
-        zoom: 5
+        zoom: 6
       })
     });
+
 
     this.map.on('click', function (args) {
       console.log(args.coordinate);
@@ -72,6 +75,12 @@ export class MapComponent implements OnInit {
   setCenter() {
     const view = this.map.getView();
     view.setCenter(ol.proj.fromLonLat([this.longitude, this.latitude]));
-    view.setZoom(5);
+    view.setZoom(17);
+  }
+  getCoordinatesByLabel(label: string) {
+    const index = this.adresses.indexOf(label);
+    this.longitude = this.adresse.features[index]['geometry'].coordinates[0];
+    this.latitude = this.adresse.features[index]['geometry'].coordinates[1];
+
   }
 }
