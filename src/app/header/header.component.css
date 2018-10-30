@@ -1,5 +1,8 @@
+.navbar{
+  height: 50px;
+}
 .sidebar{
-  margin-top: 40px !important;
+  margin-top: 45px !important;
   height: 100% !important;
   position: fixed;
 }
@@ -10,4 +13,9 @@ a{
 input:focus{
  background-color: whitesmoke !important;
  border-color: whitesmoke !important;
+}
+
+.nav-item {
+  text-align: center;
+  margin: 3px;
 }
