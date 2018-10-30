@@ -11,7 +11,7 @@
 			<div class="sidebar-sticky">
 				<ul class="nav flex-column">
 					<li class="nav-item">
-						<a class="nav-link active" href="#">Accueil <span class="sr-only">(current)</span></a>
+						<a class="nav-link" routerLink="">Accueil</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" routerLink="/map">CarteAjouer</a>
@@ -24,6 +24,9 @@
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" routerLink="/contact">Contacter</a>
+					</li>
+					<li>
+						<a class="nav-link">Bonbons collectés :<span class="badge badge-light">{{ service.candiesCart.length }}</span></a>
 					</li>
 				</ul>
 			</div>

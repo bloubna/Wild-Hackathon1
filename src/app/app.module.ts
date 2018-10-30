@@ -16,6 +16,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { ImagePreloadDirective } from './common/image-preload.directive';
 import { SearchbarComponent } from './searchbar/searchbar.component';
 import { CandyModalComponent } from './candy-modal/candy-modal.component';
+import { AcceuilComponent } from './acceuil/acceuil.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 
 @NgModule({
@@ -27,7 +29,9 @@ import { CandyModalComponent } from './candy-modal/candy-modal.component';
     ImagePreloadDirective,
     ContactComponent,
     SearchbarComponent,
-    CandyModalComponent
+    CandyModalComponent,
+    AcceuilComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
