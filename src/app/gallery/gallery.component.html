@@ -36,7 +36,7 @@
 
   </div> <!-- #end row -->
 
-  <ngb-pagination *ngIf="products.length > 12" class="d-flex justify-content-center pt-3" [collectionSize]="(totalPages / 12) * 10" [(page)]="page" [maxSize]="5"
+  <ngb-pagination *ngIf="products.length > 12" class="d-flex justify-content-center pt-3" [collectionSize]="(this.service.candiesList.length / 12) * 10" [(page)]="page" [maxSize]="5"
     [rotate]="true" [boundaryLinks]="true" (pageChange)="change()">
   </ngb-pagination>
   

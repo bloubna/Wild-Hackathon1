@@ -20,18 +20,8 @@ export class GalleryComponent implements OnInit {
   ngOnInit() {
 
     this.page = this.route.snapshot.params['page'];
-    // console.log(this.page);
-
-    this.service.setCandies()
-    .subscribe(res => {
-      this.products.push(res);
-      this.totalPages = this.products.length;
-      this.service.candiesList = this.products;
-      if (this.totalPages > 12 && this.page === 1) {
-        this.showProducts = this.products.slice(this.page, 13);
-      }
-    });
-
+    this.products = this.service.candiesList;
+    this.showProducts = this.products.slice(this.page, 13);
   }
 
   change() {
@@ -41,7 +31,6 @@ export class GalleryComponent implements OnInit {
       this.showProducts = this.products.slice((this.page - 1) * 12, 12 * this.page);
     }
     this.router.navigate([`gallery/${this.page}`]);
-    // console.log(this.page);
   }
 
   add(product) {
