@@ -1,5 +1,7 @@
 .card{
 	height: 100%;
+	background-color: #313131;
+	color: #ff6e00;
 }
 
 .col-cards{
@@ -13,4 +15,15 @@
 .card img{
 	max-height: 200px;
 	max-width: 85%;
+}
+
+.container {
+	background-image: url('../../assets/images/gallery-wallpaper.jpg');
+	background-size: 100%;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+h1 {
+	color: #ff6e00;
 }

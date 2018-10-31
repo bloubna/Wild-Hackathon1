@@ -23,3 +23,8 @@ app-searchbar:focus{
 .form-control{
 margin-right: 30px;
 }
+
+#brand {
+  font-family: 'Creepster', cursive !important;
+  font-size: 2em;
+}

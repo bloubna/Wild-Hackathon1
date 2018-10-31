@@ -1,5 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~bootstrap/dist/css/bootstrap.css';
+@import url('https://fonts.googleapis.com/css?family=Creepster');
+
 html,
 body {
   height: 100% !important;
@@ -7,4 +9,8 @@ body {
 
 body {
   margin: 0 !important;
+}
+
+h1, h2, h3 {
+  font-family: 'Creepster', cursive;
 }
