@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { CandiesService } from '../common/candies.service';
 
 @Component({
   selector: 'app-modal-map',
@@ -13,9 +14,13 @@ export class ModalMapComponent implements OnInit {
   @Input()
   mediaInput: any;
 
-  constructor() { }
+  constructor(private service: CandiesService) { }
 
   ngOnInit() {
+  }
+
+  toCart(value) {
+    this.service.candiesCart.push(value);
   }
 
 }
