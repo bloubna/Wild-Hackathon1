@@ -4,7 +4,10 @@ input:focus {
     font-family: 'Chalkduster';
     color: rgb(222, 78, 0);
 }
-
-@font-face {
-    font-family: 'Chalkduster';
-    }
+button:hover{
+background-color: rgb(222, 78, 0);
+}
+button{
+  border-color: rgb(222, 78, 0);
+  background-color: rgb(222, 78, 0);
+}

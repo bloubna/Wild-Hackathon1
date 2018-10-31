@@ -1,0 +1,9 @@
+.modal-footer button{
+    border-color: rgb(222, 78, 0);
+    background-color: rgb(222, 78, 0);
+
+}
+ .modal-footer button:hover {
+    background-color: rgb(222, 78, 0);
+  }
+
