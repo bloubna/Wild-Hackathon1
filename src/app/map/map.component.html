@@ -1,18 +1,3 @@
-<!-- <div class="container-fluid">
-  <div class="carte">
-    <div id="map" class="map">
-      <div class="form-inline" id="inputGroup">
-        <input type="text" list="SearchMap" class="form-control awesomplete pr-1" [(ngModel)]="label" placeholder="Ex: Tours, 49 boulevard preuilly 37000" (keypress)="getCoordinatesByLabel(label);setCenter()">
-        <datalist id="SearchMap">
-          <option *ngFor="let adresse of adresses"> {{adresse}} </option>
-        </datalist>
-        <button class="btn btn-success" type="submit" (click)="getCoordinatesByLabel(label);setCenter()">Rechercher</button>
-      </div>
-    </div>
-    <div id="mouse-position"></div>
-  </div>
-</div> -->
-
 <div class="carte">
   <div class="form-inline" id="inputGroup">
     <input type="text" list="SearchMap" class="form-control awesomplete pr-1" [(ngModel)]="label" placeholder="Ex: Tours, 49 boulevard preuilly 37000">
@@ -67,23 +52,6 @@
 
       </aol-source-cluster>
     </aol-layer-vector>
-
-    <!-- <aol-layer-vector>
-    <aol-source-vector>
-      <aol-feature>
-        <aol-geometry-polygon>
-<aol-collection-coordinates [coordinates]="[[0.67, 47.393],[0.68, 47.393],[0.68, 47.394144], [0.67, 47.393]]"
-            [srid]="'EPSG:4326'">
-          </aol-collection-coordinates>
-        </aol-geometry-polygon>
-         <aol-style>
-          <aol-style-stroke [color]="'red'" [width]="2"></aol-style-stroke>
-          <aol-style-fill [color]="[255,0,0,0.1]"></aol-style-fill>
-        </aol-style>
-      </aol-feature>
-
-    </aol-source-vector>
-  </aol-layer-vector> -->
   </aol-map>
 
 <ng-template #content let-modal>
