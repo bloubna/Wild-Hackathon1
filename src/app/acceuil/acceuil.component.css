@@ -1,8 +1,17 @@
 .container-fluid{
   background: url('../../assets/images/halloween-1702677_960_720.jpg') no-repeat fixed center;
   background-size: cover;
+  background-attachment: fixed;
     height: 100vh;
     color: white;
 
-
 }
+p, div{
+  font-weight: bold;
+  font-size: 120%;
+  font-family: 'Chalkduster';
+}
+
+@font-face {
+  font-family: 'Chalkduster';
+  }

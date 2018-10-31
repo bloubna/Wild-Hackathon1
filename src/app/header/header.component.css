@@ -6,8 +6,18 @@
   height: 100% !important;
   position: fixed;
 }
-a{
-  color: black;
+a, h1, h4{
+  color: rgb(222, 78, 0) !important;
+  font-family: 'Chalkduster';
+}
+
+a:hover{
+  font-size: 120%;
+}
+
+
+h4{
+  padding-top: 30%;
 }
 
 app-searchbar:focus{
@@ -22,4 +32,8 @@ app-searchbar:focus{
 
 .form-control{
 margin-right: 30px;
+}
+
+.content{
+  margin-left: 15.5%;
 }

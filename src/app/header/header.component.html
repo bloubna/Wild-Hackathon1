@@ -8,6 +8,7 @@
 
 		<nav class="col-md-2 d-md-block bg-light sidebar">
 			<div class="sidebar-sticky">
+        <h4 class="text-center">MENU</h4>
 				<ul class="nav flex-column">
 					<li class="nav-item">
 						<a class="nav-link" routerLink="">Accueil</a>
@@ -22,13 +23,13 @@
 						<a class="nav-link" routerLink="/contact">Contacter</a>
 					</li>
 					<li>
-						<a class="nav-link">Bonbons collectés :<span class="badge badge-light">{{ service.candiesCart.length }}</span></a>
+						<a class="nav-link text-center">Bonbons collectés :<span class="badge badge-light">{{ service.candiesCart.length }}</span></a>
 					</li>
 				</ul>
 			</div>
 		</nav>
 
-    <div class="col-md-10 offset-2">
+    <div class="col-md-10 w-100 offset-1 content">
       <ng-content></ng-content>
     </div>
 

@@ -1,0 +1,10 @@
+input:focus {
+    background-color: whitesmoke;
+    border-color: whitesmoke;
+    font-family: 'Chalkduster';
+    color: rgb(222, 78, 0);
+}
+
+@font-face {
+    font-family: 'Chalkduster';
+    }
