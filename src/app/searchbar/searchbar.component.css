@@ -1,5 +1,5 @@
 input:focus {
-    background-color: whitesmoke;
+    background-color: black !important;
     border-color: whitesmoke;
     font-family: 'Chalkduster';
     color: rgb(222, 78, 0);
@@ -7,6 +7,7 @@ input:focus {
 button:hover{
 background-color: rgb(222, 78, 0);
 }
+
 button{
   border-color: rgb(222, 78, 0);
   background-color: rgb(222, 78, 0);
