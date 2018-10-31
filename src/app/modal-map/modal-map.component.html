@@ -1,0 +1,13 @@
+<div class="modal-header">
+  <h4 class="modal-title">{{ mediaInput.product_name }}</h4>
+  <button type="button" class="close" aria-label="Close" (click)="modalInput.dismiss('Cross click')">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body text-center">
+  <img src="{{ mediaInput.image_url }}" alt="">
+</div>
+<div class="modal-footer">
+  <button class="btn btn-warning" (click)="modalInput.close(); toCart(mediaInput)">Collecter !</button>
+  <button class="btn btn-danger" (click)="modalInput.close()">Fermer</button>
+</div>

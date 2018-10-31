@@ -16,6 +16,8 @@ import { SearchbarComponent } from './searchbar/searchbar.component';
 import { CandyModalComponent } from './candy-modal/candy-modal.component';
 import { AcceuilComponent } from './acceuil/acceuil.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { ModalMapComponent } from './modal-map/modal-map.component';
+import { CandyBasketComponent } from './candy-basket/candy-basket.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { NotFoundComponent } from './not-found/not-found.component';
     SearchbarComponent,
     CandyModalComponent,
     AcceuilComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    ModalMapComponent,
+    CandyBasketComponent
   ],
   imports: [
     BrowserModule,
