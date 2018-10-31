@@ -1,5 +1,5 @@
 <div class="form-inline my-2 my-lg-0">
-  <input #i id="typeahead-basic" class="form-control bg-light border-light form-control-dark mr-2" placeholder="Search" aria-label="Search" type="text" [(ngModel)]="model" [ngbTypeahead]="search"/>
+  <input #i id="typeahead-basic" class="form-control bg-light border-light form-control-dark mr-2" placeholder="Je voudrais trouver..." aria-label="Search" type="text" [(ngModel)]="model" [ngbTypeahead]="search"/>
 <button class="btn btn text-dark my-2 my-sm-0 mr-2" type="submit" (click)="setCandy(i.value); openMedia(content)">Rechercher</button>
 </div>
 
