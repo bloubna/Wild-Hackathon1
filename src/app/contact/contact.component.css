@@ -1,3 +1,10 @@
-.container{
-  transform: translateY(100px);
+.container-fluid{
+  transform: translateY(50px);
+  background: url('../../assets/images/contact.jpg') no-repeat fixed center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 93vh;
+}
+.col-12{
+  margin-top: 15% !important;
 }
