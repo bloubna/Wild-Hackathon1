@@ -19,7 +19,7 @@ export class AppComponent {
       this.products.push(res);
       this.totalPages = this.products.length;
       this.service.candiesList = this.products;
-      console.log(this.service.candiesList);
+      // console.log(this.service.candiesList);
     });
   }
 }

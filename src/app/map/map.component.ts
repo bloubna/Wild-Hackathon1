@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AdresseService } from '../common/adresse.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import * as _ from 'lodash';
+import { CandiesService } from '../common/candies.service';
 
 declare var ol: any;
 @Component({
@@ -23,9 +24,9 @@ export class MapComponent implements OnInit {
   zoom = 12;
 
   distance = 60;
-  points: Array<{ x: number; y: number; }> = [];
+  points: Array<{ x: number; y: number; candy: any; }> = [];
 
-  constructor(private service: AdresseService, private modalService: NgbModal) { }
+  constructor(private service: AdresseService, private modalService: NgbModal, private candy: CandiesService) { }
 
   ngOnInit() {
 
@@ -36,64 +37,26 @@ export class MapComponent implements OnInit {
       for (let i = 0; i < res.features.length; i++) {
       this.adresses.push(res.features[i].properties.label);
       }
-      console.log(this.adresses);
+      // console.log(this.adresses);
     });
 
-    const nbPoints = 200;
+    const nbPoints = 100;
     for (let i = 0; i < nbPoints; ++i) {
       this.points.push({
         x: this.getRandomInRange(0.65, 0.75, 7),
-        y: this.getRandomInRange(47.396, 47.38, 6)
+        y: this.getRandomInRange(47.396, 47.38, 6),
+        candy: this.setCandy()
       });
     }
+    // console.log(this.points);
 
-
-  //  const mousePositionControl = new ol.control.MousePosition({
-  //     coordinateFormat: ol.coordinate.createStringXY(4),
-  //     projection: 'EPSG:4326',
-  //     // comment the following two lines to have the mouse position
-  //     // be placed within the map.
-  //     className: 'custom-mouse-position',
-  //     target: document.getElementById('mouse-position'),
-  //     undefinedHTML: '&nbsp;'
-  //   });
-
-
-  //   this.map = new ol.Map({
-  //     target: 'map',
-  //     controls: ol.control.defaults({
-  //       attributionOptions: {
-  //         collapsible: false
-  //       }
-  //     }).extend([mousePositionControl]),
-  //     layers: [
-  //       new ol.layer.Tile({
-  //         source: new ol.source.OSM()
-  //       })
-  //     ],
-  //     view: new ol.View({
-  //       center: ol.proj.fromLonLat([2.213749, 46.227638]),
-  //       zoom: 6
-  //     })
-  //   });
-
-
-  //   this.map.on('click', function (args) {
-  //     console.log(args.coordinate);
-  //     const lonlat = ol.proj.transform(args.coordinate, 'EPSG:3857', 'EPSG:4326');
-  //     console.log(lonlat);
-
-  //     const lon = lonlat[0];
-  //     const lat = lonlat[1];
-  //     alert(`lat: ${lat} long: ${lon}`);
-  //   });
   }
-  // setCenter() {
-  //   const view = this.map.getView();
-  //   console.log(view);
-  //   view.setCenter(ol.proj.fromLonLat([this.longitude, this.latitude]));
-  //   view.setZoom(17);
-  // }
+
+  setCandy() {
+    const rand = Math.floor(Math.random() * Math.floor(this.candy.candiesList.length));
+    return this.candy.candiesList[rand];
+  }
+
   getCoordinatesByLabel(label: string) {
     const index = this.adresses.indexOf(label);
     this.zoom = 16;
