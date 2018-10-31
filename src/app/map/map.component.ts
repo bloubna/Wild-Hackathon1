@@ -43,7 +43,7 @@ export class MapComponent implements OnInit {
     for (let i = 0; i < nbPoints; ++i) {
       this.points.push({
         x: this.getRandomInRange(0.65, 0.75, 7),
-        y: this.getRandomInRange(47.400, 47.38, 6)
+        y: this.getRandomInRange(47.396, 47.38, 6)
       });
     }
 
