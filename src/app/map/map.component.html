@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<!-- <div class="container-fluid">
   <div class="carte">
     <div id="map" class="map">
       <div class="form-inline" id="inputGroup">
@@ -8,17 +8,96 @@
         </datalist>
         <button class="btn btn-success" type="submit" (click)="getCoordinatesByLabel(label);setCenter()">Rechercher</button>
       </div>
-      
     </div>
-    
     <div id="mouse-position"></div>
   </div>
+</div> -->
+
+<div class="carte">
+  <div class="form-inline" id="inputGroup">
+    <input type="text" list="SearchMap" class="form-control awesomplete pr-1" [(ngModel)]="label" placeholder="Ex: Tours, 49 boulevard preuilly 37000">
+    <datalist id="SearchMap">
+      <option *ngFor="let adresse of adresses"> {{adresse}} </option>
+    </datalist>
+    <button class="btn btn-success" type="submit" (click)="getCoordinatesByLabel(label)">Rechercher</button>
+  </div>
+  <aol-map [width]="'100%'" [height]="'100%'">
+    <aol-interaction-default></aol-interaction-default>
+    <aol-control-defaults></aol-control-defaults>
+    <aol-control-fullscreen></aol-control-fullscreen>
+
+    <aol-view [zoom]="zoom">
+      <aol-coordinate [x]="longitude" [y]="latitude" [srid]="'EPSG:4326'"></aol-coordinate>
+    </aol-view>
+
+    <aol-layer-tile [opacity]="1">
+      <aol-source-osm></aol-source-osm>
+    </aol-layer-tile>
+
+    <aol-layer-vector>
+      <aol-source-cluster [distance]="distance">
+        <aol-source-vector>
+          <aol-feature *ngFor="let p of points">
+            <aol-geometry-point>
+              <!-- <aol-coordinate [x]="p.x" [y]="p.y" [srid]="'EPSG:4326'"></aol-coordinate> -->
+            </aol-geometry-point>
+
+            <aol-overlay>
+              <aol-coordinate [x]="p.x" [y]="p.y" [srid]="'EPSG:4326'"></aol-coordinate>
+              <aol-content>
+                <span (click)="openLg(content)">
+                  <img class="icon" src="https://vignette.wikia.nocookie.net/clubpenguinpookie/images/6/64/Pumpkin.png/revision/latest?cb=20141006151416">
+                </span>
+              </aol-content>
+            </aol-overlay>
+
+
+          </aol-feature>
+        </aol-source-vector>
+
+        <aol-style>
+          <aol-style-circle [radius]="10">
+            <aol-style-stroke [color]="'#fff'"></aol-style-stroke>
+            <aol-style-fill [color]="'#3399CC'"></aol-style-fill>
+          </aol-style-circle>
+          <aol-style-text [text]="'1'">
+            <aol-style-fill [color]="'#fff'"></aol-style-fill>
+          </aol-style-text>
+        </aol-style>
+
+      </aol-source-cluster>
+    </aol-layer-vector>
+
+    <!-- <aol-layer-vector>
+    <aol-source-vector>
+      <aol-feature>
+        <aol-geometry-polygon>
+<aol-collection-coordinates [coordinates]="[[0.67, 47.393],[0.68, 47.393],[0.68, 47.394144], [0.67, 47.393]]"
+            [srid]="'EPSG:4326'">
+          </aol-collection-coordinates>
+        </aol-geometry-polygon>
+         <aol-style>
+          <aol-style-stroke [color]="'red'" [width]="2"></aol-style-stroke>
+          <aol-style-fill [color]="[255,0,0,0.1]"></aol-style-fill>
+        </aol-style>
+      </aol-feature>
+
+    </aol-source-vector>
+  </aol-layer-vector> -->
+  </aol-map>
+
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title"> Bonbon! </h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">Bravo
+  </div>
+  <div class="modal-footer">
+    <a type="button" class="btn btn-light" (click)="modal.close('Close click')">Collecter !</a>
+  </div>
+</ng-template>
+
 </div>
-
-
-
-
-
-
-
-
